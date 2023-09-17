@@ -7,14 +7,14 @@
 #include <string.h>
 /**
  * struct format - structure
- * @F: char holding the format
- * @T: pointer function
+ * @C: character holding the format
+ * @P: pointer function
  */
 
 typedef struct format
 {
-	char F;
-	int (*T)(va_list);
+	char C;
+	int (*P)(va_list);
 } fmt;
 
 int _printf(const char *format, ...);
