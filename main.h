@@ -23,4 +23,5 @@ int printstr_func(va_list str_list);
 int printchar_func(va_list char_list);
 int percentage_func(__attribute__((unused))va_list param);
 int (*specifier(char s))(va_list);
+int print_num(va_list int_list);
 #endif
