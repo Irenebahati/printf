@@ -12,7 +12,7 @@
 int _printf(const char *format, ...)
 {
 	va_list arguments;
-	unsigned int output = 0;
+	unsigned int out_put = 0;
 	unsigned int i = 0;
 
 	if (format == NULL)
