@@ -3,7 +3,7 @@
 
 #include <unistd.h>
 #include <stdio.h>
-#include <starg.h>
+#include <stdarg.h>
 #include <string.h>
 /**
  * struct format - structure
