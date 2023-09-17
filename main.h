@@ -18,5 +18,6 @@ typedef struct format
 } fmt;
 
 int _printf(const char *format, ...);
-
+int _putchar(char c);
+int printstr_func(va_list str_list);
 #endif
