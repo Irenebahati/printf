@@ -20,4 +20,6 @@ typedef struct format
 int _printf(const char *format, ...);
 int _putchar(char c);
 int printstr_func(va_list str_list);
+int printchar_func(va_list char_list);
+int percentage_func(__attribute__((unused))va_list param);
 #endif
