@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 {
 	va_list arguments;
 	unsigned int output = 0;
-	unsigned int n = 0;
+	unsigned int i = 0;
 
 	if (format == NULL)
 	{
@@ -21,25 +21,25 @@ int _printf(const char *format, ...)
 	}
 
 	va_start(arguments, format);
-	for (; format[n] != '\0'; n++)
+	for (; format[i] != '\0'; i++)
 	{
-		if (format[n] == '\0' || (format[n] == '%' && !format[n + 1]))
+		if (format[i] == '\0' || (format[i] == '%' && !format[i + 1]))
 		{
 			return (-1);
 		}
-		else if (format[n] == '%' && (format[n + 1] == 'd' ||
-			format[n + 1] == 'i' || format[n + 1] == 's' ||
-			format[n + 1] == 'c' || format[n + 1] == '%'))
+		else if (format[i] == '%' && (format[i + 1] == 'd' ||
+			format[i + 1] == 'i' || format[i + 1] == 's' ||
+			format[i + 1] == 'c' || format[i + 1] == '%'))
 		{
-			output += (*converter(format[n + 1]))(arguments);
-			n++;
+			out_put += (*specifier(format[i + 1]))(arguments);
+			i++;
 		}
 		else
 		{
-			output += _putchar(format[n]);
+			out_put += _putchar(format[i]);
 		}
 	}
 	va_end(arguments);
 
-	return (output);
+	return (out_put);
 }
