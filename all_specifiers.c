@@ -10,8 +10,8 @@
 int (*specifier(char s))(va_list)
 {
 	fmt types_array[] = {
-		{'d', print_digit},
-		{'i', print_digit},
+		{'d', print_num},
+		{'i', print_num},
 		{'c', printchar_func},
 		{'s', printstr_func},
 		{'%', percentage_func},
