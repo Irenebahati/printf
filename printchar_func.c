@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * print_char - func, gets character variables
+ * printchar_func - func, gets character variables
  * @char_list: chars to be printed
  * Return: returns char_list (list of character)
  */
