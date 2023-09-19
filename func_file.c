@@ -138,7 +138,8 @@ num /= 10;
 
 i++;
 
-return (writeNumber_func(is_negative, i, buffer, flags, width, precision, size));
+return (writeNumber_func(is_negative, i, buffer,
+		flags, width, precision, size));
 }
 
 /************************* OUTPUT BINARY *************************/
